@@ -7,8 +7,7 @@ function Game(title, creator, time, played){
     this.played = played
 }*/
 
-let submit = document.getElementsByClassName("submit")
-    submit.addEventListener("submit", function(){
+    addEventListener("submit", function(){
     let newGame = document.createElement("p");
     //let game = [Game.title, Game.creator, Game.time, Game.played]
     newGame.innerText = "THIS SHIT WORKING?";
