@@ -1,0 +1,35 @@
+body{
+    background-color: #370926;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+h1{
+    color: #3A606E;
+    width: 100%;
+    text-shadow: 1px 1px #1C0118;
+}
+input{
+    background-color: #DDC9B4;
+}
+.card{
+    background-color: #3A606E;
+    width: 10rem;
+    display: flex;  
+    flex-flow: column;
+    padding: 1rem;
+    box-shadow: 1px 1px #1C0118;
+    border-radius: 50px;
+
+}
+.game-container{
+    display: grid; 
+    grid-template-columns: repeat(3) 2fr;
+}
+button{
+    background-color: #1C0118;
+    color: #DDC9B4;
+}
