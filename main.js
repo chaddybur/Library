@@ -1,30 +1,50 @@
-let myLibrary = [{
-    title: "Wingspan",
-    creator: "Elizabeth Hargrave",
-    time: "40-70 Minutes",
-    played: "Played"
-},
-{
-    title: "Clank! Legacy",
-    creator: "Andy Clautice, Paul Dennen",
-    time: "90-120 Minutes",
-    played: "Played"
-
-},
-{
-    title: "Pandemic",
-    creator: "Matt Leacock",
-    time: "45 Minutes",
-    played: "Played"
-},
-{
-    title: "Race for the Galaxy",
-    creator: "Thomas Lehmann",
-    time: "30-60 Minutes",
-    played: "Played"
-}
+let myLibrary = [
+    
 ];
+    function makeNew(){
+    myLibrary.forEach(element => {
 
+        const newCard = document.createElement("div");
+        newCard.className = ("game")
+        //const image = document.createElement("img")
+        //image.className = "image"
+        //image.src = ""
+        const titles = document.createElement("h3");
+        titles.innerText = element.title;
+        const authors = document.createElement("h3")
+        authors.innerText = element.creator;
+        const times = document.createElement("h3")
+        times.innerText = element.time
+        playButton = document.createElement("div")
+        playButton.innerText = "Played"
+        playButton.className = "played"
+        console.log(playButton.className)
+        //newCard.appendChild(image)
+        newCard.appendChild(titles)
+        newCard.appendChild(authors)
+        newCard.appendChild(times)
+        newCard.appendChild(playButton)
+
+        const grid = document.querySelector("#game-container");
+        grid.appendChild(newCard)
+        buttonPlayed();
+
+    })}
+        /*<div class = "game">
+            <div class = "image"><img src="race.jpg" alt=""></div>
+            <h3>Race for the Galaxy</h3>
+            <h3>Thomas Lehmann</h3>
+            <h3>30-60 minutes</h3>
+            <div class = "played">Played</div>
+        </div>*/
+ /* let newCard = document.createElement("p");
+    console.log(newGame)
+    newGame.innerText = game;
+    document.body.appendChild(newGame);*/
+/*const para = document.createElement("p");
+para.innerText = "This is a paragraph";
+
+document.body.appendChild(para);*/
 
 
 function Game(title, creator, time, played){
@@ -38,22 +58,7 @@ function Game(title, creator, time, played){
 }
 
 
-function buttonPlayed(){
-    document.querySelectorAll('.played').forEach(item => {
-        item.addEventListener('click', event => {
-            if(item.innerText === "Played"){
-                item.innerText = "Unplayed"
-                item.style = "background-color: #C17C74; color:#1C0118"
-            } 
-            else if(item.innerText === "Unplayed"){
-                item.innerText = "Played"
-                item.style = "color: #DDC9B4; background-color: #370926"
-            }   
-        })
-      })};
-    
 
-buttonPlayed();
 
 function pushToLibrary(x){
     myLibrary.push(x)
@@ -75,6 +80,10 @@ document.querySelector(".submit").addEventListener("click", function(){
     document.querySelector(".time").value = ""
     //event.preventDefault();
     document.querySelector(".submit").style = "background-color: blue"
+
+    makeNew();
+    document.querySelector(".submit").style = "background-color: #1C0118"
+
     
 });
   /* let newCard = document.createElement("p");
@@ -86,5 +95,20 @@ para.innerText = "This is a paragraph";
 
 document.body.appendChild(para);*/
 
+function buttonPlayed(){
+    document.querySelectorAll('.played').forEach(item => {
+        item.addEventListener('click', event => {
+            if(item.innerText === "Played"){
+                item.innerText = "Unplayed"
+                item.style = "background-color: #C17C74; color:#1C0118"
+            } 
+            else if(item.innerText === "Unplayed"){
+                item.innerText = "Played"
+                item.style = "color: #DDC9B4; background-color: #370926"
+            }   
+        })
+      })};
+    
 
+buttonPlayed();
 
