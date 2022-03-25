@@ -8,12 +8,14 @@ body{
 
 }
 h1{
-    color: #3A606E;
+    color: #C17C74;
     width: 100%;
     text-shadow: 1px 1px #1C0118;
 }
 input{
     background-color: #DDC9B4;
+    border-radius: 10px;
+    
 }
 .card{
     background-color: #3A606E;
@@ -24,6 +26,7 @@ input{
     box-shadow: 1px 1px #1C0118;
     border-radius: 50px;
     margin-bottom: 2rem;
+
 
 }
 .game-container{
@@ -43,6 +46,10 @@ input{
 .game img{
     width: 10rem;
     height: 10rem;
+}
+.played{
+    background-color: #370926;
+    border-radius: 25px;
 }
 button{
     background-color: #1C0118;
