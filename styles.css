@@ -23,11 +23,26 @@ input{
     padding: 1rem;
     box-shadow: 1px 1px #1C0118;
     border-radius: 50px;
+    margin-bottom: 2rem;
 
 }
 .game-container{
     display: grid; 
-    grid-template-columns: repeat(3) 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    background-color: #370926;
+}
+.game{
+    background-color: #3A606E;
+    color: #DDC9B4;
+    border-radius: 25px;
+    width: 80%;
+    padding: 1rem;
+    margin: 5px;
+}
+.game img{
+    width: 10rem;
+    height: 10rem;
 }
 button{
     background-color: #1C0118;
