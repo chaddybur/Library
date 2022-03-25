@@ -51,7 +51,8 @@ input{
     background-color: #370926;
     border-radius: 25px;
 }
-button{
+.submit{
     background-color: #1C0118;
     color: #DDC9B4;
+    margin-top: 1rem;
 }
