@@ -1,3 +1,21 @@
+function buttonPlayed(){
+    document.querySelectorAll('.played').forEach(item => {
+        item.addEventListener('click', event => {
+            if(item.innerText === "Played"){
+                item.innerText = "Unplayed"
+                item.style = "background-color: #C17C74; color:#1C0118"
+            } 
+            else if(item.innerText === "Unplayed"){
+                item.innerText = "Played"
+                item.style = "color: #DDC9B4; background-color: #370926"
+            }   
+        })
+      })};
+    
+
+buttonPlayed();
+
+
 let myLibrary = [
     
 ];
@@ -27,38 +45,29 @@ let myLibrary = [
 
         const grid = document.querySelector("#game-container");
         grid.appendChild(newCard)
-        buttonPlayed();
+        myLibrary.pop(element)
+
+        playButton.addEventListener('click', event => {
+            if(playButton.innerText === "Played"){
+                playButton.innerText = "Unplayed"
+                playButton.style = "background-color: #C17C74; color:#1C0118"
+            } 
+            else if(playButton.innerText === "Unplayed"){
+                playButton.innerText = "Played"
+                playButton.style = "color: #DDC9B4; background-color: #370926"
+            }   
+        })
+      
 
     })}
-        /*<div class = "game">
-            <div class = "image"><img src="race.jpg" alt=""></div>
-            <h3>Race for the Galaxy</h3>
-            <h3>Thomas Lehmann</h3>
-            <h3>30-60 minutes</h3>
-            <div class = "played">Played</div>
-        </div>*/
- /* let newCard = document.createElement("p");
-    console.log(newGame)
-    newGame.innerText = game;
-    document.body.appendChild(newGame);*/
-/*const para = document.createElement("p");
-para.innerText = "This is a paragraph";
-
-document.body.appendChild(para);*/
 
 
 function Game(title, creator, time, played){
-    
     this.title = title
     this.creator = creator
     this.time = time
     this.played = played
-    
-    
 }
-
-
-
 
 function pushToLibrary(x){
     myLibrary.push(x)
@@ -73,42 +82,15 @@ document.querySelector(".submit").addEventListener("click", function(){
     newGame = new Game(title, author, time, played)
     pushToLibrary(newGame)
 
-    //console.table(myLibrary)
-    //alert("pause")
     document.querySelector(".title").value = ""
     document.querySelector(".creator").value = ""
     document.querySelector(".time").value = ""
-    //event.preventDefault();
     document.querySelector(".submit").style = "background-color: blue"
 
     makeNew();
     document.querySelector(".submit").style = "background-color: #1C0118"
 
-    
 });
-  /* let newCard = document.createElement("p");
-    console.log(newGame)
-    newGame.innerText = game;
-    document.body.appendChild(newGame);*/
-/*const para = document.createElement("p");
-para.innerText = "This is a paragraph";
+ 
 
-document.body.appendChild(para);*/
-
-function buttonPlayed(){
-    document.querySelectorAll('.played').forEach(item => {
-        item.addEventListener('click', event => {
-            if(item.innerText === "Played"){
-                item.innerText = "Unplayed"
-                item.style = "background-color: #C17C74; color:#1C0118"
-            } 
-            else if(item.innerText === "Unplayed"){
-                item.innerText = "Played"
-                item.style = "color: #DDC9B4; background-color: #370926"
-            }   
-        })
-      })};
-    
-
-buttonPlayed();
 
