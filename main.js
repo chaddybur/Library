@@ -61,12 +61,13 @@ let myLibrary = [
 
     })}
 
-
-function Game(title, creator, time, played){
+    class Game{
+    constructor(title, creator, time, played){
     this.title = title
     this.creator = creator
     this.time = time
     this.played = played
+}
 }
 
 function pushToLibrary(x){
